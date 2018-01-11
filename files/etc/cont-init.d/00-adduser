@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+PUID=${PUID:-1050}
+PGID=${PGID:-1050}
+groupadd -r caddy && useradd --no-log-init -r -g caddy caddy
+
+groupmod -o -g "$PGID" caddy
+usermod -o -u "$PUID" caddy

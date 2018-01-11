@@ -1,0 +1,8 @@
+#!/usr/bin/with-contenv bash
+
+mkdir -p /var/www/html
+chown -R caddy:caddy /var/www/html
+mkdir -p /tmp/caddy
+chown caddy:caddy /usr/bin/caddy
+chown caddy:caddy /etc/Caddyfile
+setcap 'cap_net_bind_service=+eip' /usr/bin/caddy
