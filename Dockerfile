@@ -27,3 +27,4 @@ EXPOSE 80
 
 # Allow /var/www/html to be mounted since we'll be putting our root for caddy in /var/www/html
 VOLUME ["/var/www/html"]
+VOLUME ["/caddy"]

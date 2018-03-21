@@ -3,6 +3,8 @@
 mkdir -p /var/www/html
 chown -R caddy:caddy /var/www/html
 mkdir -p /tmp/caddy
-chown caddy:caddy /usr/bin/caddy
+mkdir -p /caddy
+chown caddy:caddy /usr/bin/Caddyfile
 chown caddy:caddy /etc/Caddyfile
+chown caddy:caddy /caddy
 setcap 'cap_net_bind_service=+eip' /usr/bin/caddy
